@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor Check-In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🏢 Green Heights Society</h2>
+    <h3>Visitor Check-In</h3>
+
+    <form id="visitorForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+    <select id="block" onchange="loadFlats()" required>
+        <option value="">Select Block</option>
+        <option value="A">Block A</option>
+        <option value="B">Block B</option>
+        <option value="C">Block C</option>
+    </select>
+
+    <select id="flat" required>
+        <option value="">Select Flat</option>
+    </select>
+
+    <select id="purpose" required>
+        <option value="">Purpose of Visit</option>
+        <option>Delivery</option>
+        <option>Guest</option>
+        <option>Maintenance</option>
+    </select>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="message"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
